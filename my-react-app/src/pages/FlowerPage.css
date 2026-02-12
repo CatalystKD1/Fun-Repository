@@ -1,0 +1,48 @@
+.flower-page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff0f5;
+}
+
+
+.counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.flower {
+  position: fixed;
+  font-size: 20px;
+  cursor: pointer;
+  animation: grow 4s ease-out forwards;
+  user-select: none;
+}
+
+
+
+@keyframes grow {
+  from {
+    transform: scale(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 1;
+  }
+}
+
+.next-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+}

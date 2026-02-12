@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import HappyValentines from './pages/HappyValentines'
+import DistancePage from './pages/DistancePage'
+import FlowerPage from './pages/FlowerPage'
 import './App.css'
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
     <>
       <div className="container">
         {step === 0 && <HappyValentines onNext={nextStep} />}
+        {step === 1 && <DistancePage onNext={nextStep} />}
+        {step === 2 && <FlowerPage onNext={nextStep} />}
       </div>
     </>
   );
