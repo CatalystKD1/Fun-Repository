@@ -2,7 +2,7 @@
   position: relative;
   width: 150vh;
   height: 80vh;
-  border: 2px solid #ad0556Page;
+  border: 2px solid #ad0556;
   border-radius: 12px;
   background-color: #ad0556;
   overflow: hidden;
@@ -23,6 +23,8 @@
   font-size: 2rem;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 0.2s;
 }
 
