@@ -16,7 +16,7 @@ export default function LovePage({ onNext }) {
 
   // Convert to usable URLs
   const images = useMemo(
-    () => photoNames.map((name) => `/love/${name}`),
+    () => photoNames.map((name) => `${import.meta.env.BASE_URL}love/${name}`),
     []
   );
 
