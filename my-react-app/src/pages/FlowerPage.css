@@ -2,9 +2,9 @@
   position: relative;
   width: 150vh;
   height: 80vh;
-  border: 2px solid #ff86c9;
+  border: 2px solid #ad0556Page;
   border-radius: 12px;
-  background-color: #ff86c9;
+  background-color: #ad0556;
   overflow: hidden;
   margin: 2rem 0;
   display: flex;
@@ -30,7 +30,7 @@
   transform: scale(1.5);
 }
 
-.continue-btn {
+.continue-button {
     font-size:20px;
     opacity: 2;
     background-color: #ff86c9;

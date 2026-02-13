@@ -6,7 +6,7 @@ function HappyValentines({ onNext }) {
         <div className="page">
         <ValentineCard />
 
-            <button class="continue-btn"onClick={onNext}>Continue</button>
+            <button className="continue-btn"onClick={onNext}>Continue</button>
         </div>
     );
 }

@@ -36,7 +36,7 @@ export default function FlowerPage({ onNext }) {
       <h2 className="f-click">Click the Flowers to get your Valentine Flowers.</h2>
       <h3 className="count">Flowers clicked: {clickedCount}</h3>
       {clickedCount >= 20 && (
-        <h3 className="More Text">
+        <h3 className="more-text">
           Wow babe, that's a lot of flowers!
         </h3>
       )}
