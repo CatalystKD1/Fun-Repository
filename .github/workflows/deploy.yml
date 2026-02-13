@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -21,6 +21,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: my-react-app   # 👈 IMPORTANT
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -29,10 +33,11 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: 'npm'
+          cache: "npm"
+          cache-dependency-path: my-react-app/package-lock.json  # 👈 IMPORTANT
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
@@ -43,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './dist'
+          path: my-react-app/dist   # 👈 IMPORTANT (dist is inside subfolder)
 
       - name: Deploy to GitHub Pages
         id: deployment
